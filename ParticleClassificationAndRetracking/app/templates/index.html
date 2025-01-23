@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Classification and Trajectory Reconstruction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Particle Classification and Trajectory Reconstruction</h1>
+        <p>Upload your data to classify particles and reconstruct trajectories using GNN models.</p>
+    </header>
+
+    <div class="container">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file">Upload Data File:</label>
+            <input type="file" id="file" name="file" required>
+
+            <button type="submit">Upload and Process</button>
+        </form>
+    </div>
+
+    {% if classification_result %}
+    <div class="result-container">
+        <h2>Classification Result:</h2>
+        <p><strong>Particle Type:</strong> {{ classification_result }}</p>
+    </div>
+    {% endif %}
+
+    {% if trajectory_result %}
+    <div class="result-container">
+        <h2>Trajectory Reconstruction:</h2>
+        <p><strong>Reconstructed Trajectory:</strong> {{ trajectory_result }}</p>
+    </div>
+    {% endif %}
+    
+    <footer>
+        <p>&copy; 2025 Particle Physics Project | Made by Prashanti</p>
+    </footer>
+</body>
+</html>
