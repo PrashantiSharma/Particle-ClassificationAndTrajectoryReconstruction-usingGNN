@@ -1,8 +1,6 @@
 # Particle-ClassificationAndTrajectoryReconstruction-usingGNN
 
 
-# Particle Classification and Trajectory Prediction using GNNs
-
 This project involves building a web application to classify particles and predict their trajectories using machine learning models. The application uses Flask as a backend to handle requests and serve an interface for users to upload data for classification and trajectory prediction. The models are built with PyTorch and use Graph Neural Networks (GNNs) for particle classification and trajectory reconstruction.
 
 ## Features
